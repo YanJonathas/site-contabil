@@ -1,2 +1,2 @@
 # site-contabil
-Site contábil, feito com HTML, CSS é JS, com auxilio do Chat-GPT.
+Site contábil, feito com HTML, CSS, JS é com auxilio do Chat-GPT.
