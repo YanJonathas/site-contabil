@@ -1,4 +1,5 @@
 # site-contabil
+https://yanjonathas.github.io/site-contabil/
 Site contábil desenvolvido com HTML, CSS, JavaScript e com o auxílio do ChatGPT.
 
 Este projeto foi criado com o objetivo de apresentar serviços de contabilidade de forma clara, moderna e acessível. O layout é totalmente responsivo, garantindo excelente visualização tanto em dispositivos móveis quanto em desktops. O site conta com seções bem organizadas, como apresentação da empresa, serviços oferecidos e formas de contato. O design limpo e objetivo proporciona uma experiência agradável ao usuário, com foco na facilidade de navegação e profissionalismo.
