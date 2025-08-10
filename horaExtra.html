@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Assets/style.css">
-    <title>HoraExtra-YJ-Soluções</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Assets/style.css">
+  <title>HoraExtra-YJ-Soluções</title>
 </head>
+
 <body>
 
-  <header> 
+  <header>
     <div class="menu">
       <div class="logo">
         <img src="./Imagens/calculando.png" alt="Logo" class="img-logo">
@@ -23,52 +25,53 @@
 
       <!-- Links de Navegação -->
       <nav class="navbar">
-        <button  href="#" class="tablink" onclick="window.location.href='index.html'">Home</button>
+        <button href="#" class="tablink" onclick="window.location.href='index.html'">Home</button>
         <button class="tablink" onclick="window.location.href='rescisao.html'">Rescisão</button>
-        <button class="tablink"  onclick="window.location.href='salFamilia.html'">Salario Família</button>
+        <button class="tablink" onclick="window.location.href='salFamilia.html'">Salario Família</button>
         <button class="tablink" onclick="window.location.href='horaExtra.html'">Horas Extras</button>
       </nav>
     </div>
   </header>
-  
-    <main id="horas" class="tab-content">
-          <div class="container" id="horasExt">
-            <h2 class="titulo">Horas Extras</h2>
-            <label><strong class="strong2">Salário mensal (R$):</strong>  
-              <input type="number" id="salarioHoraExtra">
-            </label>
-          
-            <label><strong class="strong2">Horas extras trabalhadas:</strong>
-              <input type="number" id="quantidadeHorasExtras">
-            </label>
-          
-            <label><strong class="strong2">Tipo e Adicional da Hora Extra:</strong>
-              <select id="tipoHoraExtra">
-                <option value="50-normal">50% - Normal</option>
-                <option value="100-normal">100% - Normal</option>
-                <option value="50-noturna">50% - Noturna</option>
-                <option value="100-noturna">100% - Noturna</option>
-              </select>
-            </label>
-          
-            <button class="buttonCalc" onclick="calcularHoraExtra()">Calcular Hora Extra</button>
 
-            <div class="botoes-hora-extra">
-              <button class="buttonReset" onclick="limparHorasExtras()">Limpar</button> 
-              <button class="buttonCalc" onclick="visualizarPDFHoras()">Visualizar PDF</button>
-              <button class="buttonCalc" onclick="baixarPDFHoras()">Baixar PDF</button>
-            </div>
+  <main id="horas" class="tab-content">
+    <div class="container" id="horasExt">
+      <h2 class="titulo">Horas Extras</h2>
+      <label><strong class="strong2">Salário mensal (R$):</strong>
+        <input type="number" id="salarioHoraExtra">
+      </label>
 
-            <div id="resultadoHoraExtra" class="resultado"></div>
-          </div>
-    </main>
-<footer class="rodape">
+      <label><strong class="strong2">Horas extras trabalhadas:</strong>
+        <input type="number" id="quantidadeHorasExtras">
+      </label>
+
+      <label><strong class="strong2">Tipo e Adicional da Hora Extra:</strong>
+        <select id="tipoHoraExtra">
+          <option value="50-normal">50% - Normal</option>
+          <option value="100-normal">100% - Normal</option>
+          <option value="50-noturna">50% - Noturna</option>
+          <option value="100-noturna">100% - Noturna</option>
+        </select>
+      </label>
+
+      <button class="buttonCalc" onclick="calcularHoraExtra()">Calcular Hora Extra</button>
+
+      <div class="botoes-hora-extra">
+        <button class="buttonReset" onclick="limparHorasExtras()">Limpar</button>
+        <button class="buttonCalc" onclick="visualizarPDFHoras()">Visualizar PDF</button>
+        <button class="buttonCalc" onclick="baixarPDFHoras()">Baixar PDF</button>
+      </div>
+
+      <div id="resultadoHoraExtra" class="resultado"></div>
+    </div>
+  </main>
+  <footer class="rodape">
     <p>Contato: @yanjonathas | <a href="mailto:yan1094@hotmail.com">yan1094@hotmail.com</a> | 📞 (74) 00000-0000</p>
     <p>© 2025 YJ-Soluções. Todos os direitos reservados.</p>
-</footer>
-<script src="Assets/script.js"></script>
-<script src="Assets/horaExtra.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-<script src="Assets/tab-content.js"></script>
+  </footer>
+  <script src="Assets/script.js"></script>
+  <script src="Assets/horaExtra.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="Assets/tab-content.js"></script>
 </body>
+
 </html>

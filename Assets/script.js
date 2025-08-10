@@ -9,7 +9,16 @@ function calcularRescisao() {
     const avisoPrevioTrabalhado = document.getElementById("avisoPrevioTrabalhado").checked;
     const tipoRescisao = document.getElementById("tipoRescisao").value;
 
+    if (diasTrabalhados > 30) {
+        return alert('Os dias trabalhados no mês não podem ultrapasar os 30 dias mensais!');
+    };
+
     const saldoSalario = (salario / 30) * diasTrabalhados;
+
+    if (mesesTrabalhados > 12) {
+        return alert('Os meses trabalhados não podem ultrapassar os 12 meses anuais!');
+    };
+    
     const feriasProporcionais = ((salario / 12) * mesesTrabalhados) + (((salario / 12) * mesesTrabalhados) / 3);
     const feriasVencidasValor = feriasVencidas > 0 ? (feriasVencidas * salario) + ((feriasVencidas * salario) / 3) : 0;
 
@@ -19,6 +28,8 @@ function calcularRescisao() {
     }
     const decimoTerceiroValor = decimoTerceiroVencido > 0 ? decimoTerceiroVencido * salario : 0;
 
+    const fgtsDepositado = salario * 0.08 * (anosTrabalhados * 12 + mesesTrabalhados); // mudança de local para poder servir de base de alculo
+
     let avisoPrevio = 0;
     if (tipoRescisao === "semJustaCausa" && !avisoPrevioTrabalhado) {
         avisoPrevio = salario;
@@ -26,10 +37,10 @@ function calcularRescisao() {
 
     let multaFGTS = 0;
     if (tipoRescisao === "semJustaCausa") {
-        multaFGTS = salario * 0.40;
+        multaFGTS = fgtsDepositado * 0.40;
     }
 
-    const fgtsDepositado = salario * 0.08 * (anosTrabalhados * 12 + mesesTrabalhados);
+    //const fgtsDepositado = salario * 0.08 * (anosTrabalhados * 12 + mesesTrabalhados);   mudei de lugar para poder servir de base para a multa do fgts
 
     const totalBruto = saldoSalario + feriasProporcionais + feriasVencidasValor + decimoTerceiro + decimoTerceiroValor + avisoPrevio + multaFGTS;
 
@@ -205,7 +216,5 @@ function baixarPDF() {
         html2pdf().set(opt).from(resultado).save();
     }, 500);
 }
-
-
 
 
